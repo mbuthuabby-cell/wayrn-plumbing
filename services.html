@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Wayrn Plumbing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav-solid">
+        <a href="index.html" class="logo">Wayrn Plumbing</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header">
+        <span class="eyebrow">Engineering Excellence</span>
+        <h1>Our Technical Services</h1>
+        <p>Expert domestic and commercial engineering, delivered with absolute accountability.</p>
+        <div class="spec-strip">
+            <span>Index</span>
+            <span class="ruler"></span>
+            <span>05 Disciplines</span>
+        </div>
+    </section>
+
+    <!-- SERVICES LIST -->
+    <section class="section" style="padding-top: 3rem;">
+        <div class="services-list-container reveal">
+
+            <div class="service-list-row">
+                <span class="service-code">WP&#8209;01</span>
+                <div class="service-info">
+                    <h3>Leak detection &amp; pipe repairs</h3>
+                    <p>Using advanced acoustic and thermal imaging to locate hidden leaks, followed by swift, permanent pipe repairs to protect your property from water damage.</p>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Book</a>
+            </div>
+
+            <div class="service-list-row">
+                <span class="service-code">WP&#8209;02</span>
+                <div class="service-info">
+                    <h3>New water line installations</h3>
+                    <p>Precision routing and fitting of durable, high-pressure water mains for new residential builds, home extensions, or complete property modernisations.</p>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Book</a>
+            </div>
+
+            <div class="service-list-row">
+                <span class="service-code">WP&#8209;03</span>
+                <div class="service-info">
+                    <h3>Clogged drain &amp; toilet fixes</h3>
+                    <p>Rapid mechanical unblocking and liquid scouring to clear stubborn waste, mineral scale, and blockages from your domestic drainage.</p>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Book</a>
+            </div>
+
+            <div class="service-list-row">
+                <span class="service-code">WP&#8209;04</span>
+                <div class="service-info">
+                    <h3>Faucet, shower &amp; sink repairs</h3>
+                    <p>Restoring flawless water pressure and temperature control by repairing dripping mixer taps, faulty shower cartridges, and leaking waste traps.</p>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Book</a>
+            </div>
+
+            <div class="service-list-row">
+                <span class="service-code">WP&#8209;05</span>
+                <div class="service-info">
+                    <h3>Plumbing system inspections &amp; maintenance</h3>
+                    <p>Rigorous pressure tests, flow calibrations, and preventative health checks on your entire water network to catch minor faults before they become major emergencies.</p>
+                </div>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Book</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Wayrn Plumbing</p>
+        <p>All technical rights reserved</p>
+    </footer>
+
+    <script>
+        (function () {
+            var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var items = document.querySelectorAll('.reveal');
+            if (reduce || !('IntersectionObserver' in window)) {
+                items.forEach(function (el) { el.classList.add('in'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            items.forEach(function (el) { io.observe(el); });
+        })();
+    </script>
+
+</body>
+</html>
